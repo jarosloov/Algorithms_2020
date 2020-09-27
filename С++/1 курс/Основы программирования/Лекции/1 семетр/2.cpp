@@ -15,7 +15,7 @@ void coordinates(double totalTime, double clone_totalTime, double speed, double 
                 y = (speed * zero_time * sin(corner)) - (( G * pow(zero_time, 2)) / 2);	
 	        if(y > 0)
                 {
-                        cout<<" X="<<x<<" "<<" Y="<<y<< endl;
+                        cout<<" X=" << x << " " << " Y=" << y << endl;
                 }
                         else {
                                 x = pow(speed, 2) * sin(2 * corner) / G;
