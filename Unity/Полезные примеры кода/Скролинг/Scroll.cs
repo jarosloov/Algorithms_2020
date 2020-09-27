@@ -34,6 +34,7 @@ public class Scroll : MonoBehaviour
         instPans = new GameObject[panCount];            // задем размер масиву 
         pansPos = new Vector2[panCount];                // задем размер масиву 
         pansScale = new Vector2[panCount];
+
         for (int i = 0; i < panCount; i++)              // создание объектов 
         {
             instPans[i] = Instantiate(panPrefab, transform, false);     // содаём объект
