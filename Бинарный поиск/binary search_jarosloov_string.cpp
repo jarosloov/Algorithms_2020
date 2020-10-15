@@ -2,15 +2,15 @@
 
 using namespace std;
 
-void binary_search(int array[], int len, int element) {
+void binary_search(string array[], int len, string element) {
     int low = 0;
     int high = len;
 
     while (low <= high) {
         int mid = (low + high) / 2;
-        int guess = array[mid];
+        string guess = array[mid];
         if (guess == element) {
-            cout << "Element found under index:: " << mid << endl;
+            cout << "Element found under index: " << mid << endl;
             return;
         }
         if (guess > element)
@@ -24,9 +24,9 @@ void binary_search(int array[], int len, int element) {
 
 int main() {
 
-    int array[] = { 1,2,3,4,5,6,7,8,9,10,100 };
-    int len = sizeof(array) / sizeof(int);
-    binary_search(array, len, 5);
+    string array[] = { "Arik", "Marik", "Zarik"};
+    int len = sizeof(array)/sizeof(array);
+    binary_search(array, len, "Marik");
 
 
     return 0;

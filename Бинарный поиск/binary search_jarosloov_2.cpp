@@ -9,14 +9,14 @@ int binary_search(int array[], int len, int element) {
     while (low <= high) {
         int mid = (low + high) / 2;
         int guess = array[mid];
-        if (guess == element)           // Если значение найдено 
+        if (guess == element)          
             return mid;
         if (guess > element)
             high = mid - 1;
         else
             low = mid + 1;
     }
-    cout << "Ошибка!" << endl;
+    cout << "Mistake!" << endl;
 }
 
 int main() {
