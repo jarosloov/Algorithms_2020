@@ -32,9 +32,8 @@ int main() {
     int len_2 = sizeof(array_2) / sizeof(double);
 
     string array_3[] = { "Arik", "Marik", "Zarik" };
-    int len_3 = sizeof(array_3) / sizeof(string); // Эта строка не дает правильного результата: строки имеют разную длинну, которая, к тому же не совпадает с колич. символов!
-
+    int len_3 = sizeof(array_3) / sizeof(string);
     cout << "Element found under index: " << binary_search(array_1, len_1, 5) << endl;
     cout << "Element found under index: " << binary_search(array_2, len_2, 5.5) << endl;
-    cout << "Element found under index: " << binary_search(array_3, len_3, "Marik") << endl;
+    cout << "Element found under index: " << binary_search(array_3, len_3, string("Marik")) << endl; // Правильный вариант!!!
 }
