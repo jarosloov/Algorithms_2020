@@ -1,5 +1,8 @@
 import cv2
 import pytesseract
 
-# Путь для подключения tesseract
-pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe'
+try:
+    img = cv2.imread('chek.jpg', cv2.COLOR_BGR2RGB)
+    print(pytesseract.image_to_string(img, config=r'--oem 3 --psm 6'))
+except:
+    print("Ошибка")
